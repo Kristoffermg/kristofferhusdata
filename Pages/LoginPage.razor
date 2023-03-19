@@ -1,0 +1,51 @@
+﻿@layout LoginLayout // removes the navigation bar at the left
+@page "/login"
+@using kristofferhusdata.Authentication
+@inject UserAccountService userAccountService
+@inject AuthenticationStateProvider authStateProvider
+@inject ILogger<Counter> logger
+@inject IJSRuntime jsRuntime
+@inject NavigationManager NavigationManager
+
+
+<PageTitle>Login side</PageTitle>
+
+<div class="login-form">
+    <h1>Velkommen til Kristoffers' hjem :-)</h1>
+
+    Brugernavn: <br />
+    <input @bind="model.UserName"/> <br />
+
+    Adgangskode: <br />
+    <input @bind="model.Password"/> <br /> 
+    <button @onclick="Authenticate">Login</button>
+</div>
+
+
+@code {
+    private class Model
+    {
+        public string UserName { get; set; }
+        public string Password { get; set; }
+    }
+
+    private Model model = new Model();
+
+    private async Task Authenticate()
+    {
+        var userAccount = userAccountService.GetByUsername(model.UserName);
+        if(userAccount == null || userAccount.Password != model.Password)
+        {
+            await jsRuntime.InvokeVoidAsync("alert", "Forkert brugernavn eller adgangskode");
+            return;
+        }
+
+        var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;
+        await customAuthStateProvider.UpdateAuthenticationState(new UserSession
+        {
+            UserName = userAccount.UserName,
+            Role = userAccount.Role
+        });
+        NavigationManager.NavigateTo("/main", true);
+    }
+}

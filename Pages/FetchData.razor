@@ -1,0 +1,50 @@
+﻿@page "/fetchdata"
+
+<PageTitle>Weather forecast</PageTitle>
+
+@using kristofferhusdata.Data
+@using DataLibrary
+@using Microsoft.Extensions.Configuration
+@inject ClimateInformationService ClimateInformationService
+@inject IDataAccess _data
+@inject IConfiguration _config
+
+<h1>Climate Information</h1>
+
+@if (climateInformation == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp</th>
+                <th>Humidity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in climateInformation)
+            {
+                <tr>
+                    <td>@forecast.DateStamp</td>
+                    <td>@forecast.Temperature</td>
+                    <td>@forecast.Humidity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    List<ClimateInformation> climateInformation;
+
+    protected override async Task OnInitializedAsync()
+    {
+        string sql = "select Temperature, DateStamp, Humidity from ClimateInformation";
+
+        climateInformation = await _data.LoadData<ClimateInformation, dynamic>(sql, new { }, _config.GetConnectionString("default"));
+    }
+}

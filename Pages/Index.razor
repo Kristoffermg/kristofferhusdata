@@ -1,0 +1,28 @@
+﻿@page "/"
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+
+
+
+
+
+
+
+@code {
+    protected async override Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if(user.Identity is not null && user.Identity.IsAuthenticated)
+        {
+            
+        }
+        else
+        {
+
+            NavigationManager.NavigateTo("/login");
+        }
+    }
+}

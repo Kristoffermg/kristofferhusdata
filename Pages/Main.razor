@@ -1,0 +1,27 @@
+﻿@page "/main"
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+@attribute [Authorize(Roles = "DiscordModerator")]
+
+<AuthorizeView>
+    <NotAuthorized>
+        Du kan desværre ikke se den her side :(
+    </NotAuthorized>
+
+    <Authorized>
+        <h1>wazzapp, @context.User.Identity.Name</h1>
+
+    </Authorized>
+</AuthorizeView>
+
+
+@code {
+    protected async override Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+
+    }
+}
