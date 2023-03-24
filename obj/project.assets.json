@@ -472,20 +472,6 @@
             "rid": "win"
           }
         }
-      },
-      "DataLibrary/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Dapper": "2.0.123",
-          "MySql.Data": "8.0.32.1"
-        },
-        "compile": {
-          "bin/placeholder/DataLibrary.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DataLibrary.dll": {}
-        }
       }
     }
   },
@@ -1751,17 +1737,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "DataLibrary/1.0.0": {
-      "type": "project",
-      "path": "../DataLibrary/DataLibrary.csproj",
-      "msbuildProject": "../DataLibrary/DataLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Dapper >= 2.0.123",
-      "DataLibrary >= 1.0.0",
       "MySql.Data >= 8.0.32.1",
       "System.Data.SqlClient >= 4.8.5"
     ]
@@ -1792,11 +1772,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\DataLibrary\\DataLibrary.csproj": {
-              "projectPath": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\DataLibrary\\DataLibrary.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

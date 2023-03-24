@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "Hash": "YjmXC4PO001Pof1T3KiTgwhxPXVzEJEqColdr67ElnQ=",
+  "Hash": "D4ZGXYVnAehocI5G5b4ev0FsD1DcuIFswProdR+kP78=",
   "Source": "kristofferhusdata",
   "BasePath": "_content/kristofferhusdata",
   "Mode": "Default",
-  "ManifestType": "Build",
+  "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
