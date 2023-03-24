@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YjmXC4PO001Pof1T3KiTgwhxPXVzEJEqColdr67ElnQ=",
+  "Hash": "icJtt/83OzEIfaV2fGebx2noK9/q6JGMB7OvV5NbSBM=",
   "Source": "kristofferhusdata",
   "BasePath": "_content/kristofferhusdata",
   "Mode": "Default",
@@ -83,23 +83,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
-    },
-    {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "kristofferhusdata",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
-      "BasePath": "_content/kristofferhusdata",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
@@ -202,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "kristofferhusdata",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "BasePath": "_content/kristofferhusdata",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
