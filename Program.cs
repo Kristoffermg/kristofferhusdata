@@ -4,7 +4,7 @@ using kristofferhusdata.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
-using DataLibrary;
+using kristofferhusdata.DataLibrary;
 
 var builder = WebApplication.CreateBuilder(args);
 
