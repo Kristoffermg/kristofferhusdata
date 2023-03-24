@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "icJtt/83OzEIfaV2fGebx2noK9/q6JGMB7OvV5NbSBM=",
+  "Hash": "5oxnVeW1vLr5t5TVuO8DMzGif0M+6sDm35CLmO+RSIY=",
   "Source": "kristofferhusdata",
   "BasePath": "_content/kristofferhusdata",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "kristofferhusdata\\wwwroot",
       "Source": "kristofferhusdata",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\bundle\\kristofferhusdata.styles.css",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\bundle\\kristofferhusdata.styles.css",
       "SourceId": "kristofferhusdata",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "kristofferhusdata.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\bundle\\kristofferhusdata.styles.css"
+      "OriginalItemSpec": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\bundle\\kristofferhusdata.styles.css"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\kristofferhusdata.bundle.scp.css",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\kristofferhusdata.bundle.scp.css",
       "SourceId": "kristofferhusdata",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "kristofferhusdata.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\kristofferhusdata.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\kristofferhusdata.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\css\\site.css",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\favicon.ico",
       "SourceId": "kristofferhusdata",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\wwwroot\\",
       "BasePath": "_content/kristofferhusdata",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
