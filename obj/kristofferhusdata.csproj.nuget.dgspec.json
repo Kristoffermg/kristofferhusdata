@@ -4,71 +4,6 @@
     "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\kristofferhusdata.csproj": {}
   },
   "projects": {
-    "C:\\Users\\krist\\Documents\\GitHub\\DataLibrary\\DataLibrary.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\krist\\Documents\\GitHub\\DataLibrary\\DataLibrary.csproj",
-        "projectName": "DataLibrary",
-        "projectPath": "C:\\Users\\krist\\Documents\\GitHub\\DataLibrary\\DataLibrary.csproj",
-        "packagesPath": "C:\\Users\\krist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\krist\\Documents\\GitHub\\DataLibrary\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\krist\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "dependencies": {
-            "Dapper": {
-              "target": "Package",
-              "version": "[2.0.123, )"
-            },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[8.0.32.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\kristofferhusdata.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -92,11 +27,7 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\krist\\Documents\\GitHub\\DataLibrary\\DataLibrary.csproj": {
-                "projectPath": "C:\\Users\\krist\\Documents\\GitHub\\DataLibrary\\DataLibrary.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
