@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\kristofferhusdata.csproj": {}
+    "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\kristofferhusdata.csproj": {}
   },
   "projects": {
-    "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\kristofferhusdata.csproj": {
+    "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\DataLibrary\\DataLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\kristofferhusdata.csproj",
-        "projectName": "kristofferhusdata",
-        "projectPath": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\kristofferhusdata.csproj",
+        "projectUniqueName": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\DataLibrary\\DataLibrary.csproj",
+        "projectName": "DataLibrary",
+        "projectPath": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\DataLibrary\\DataLibrary.csproj",
         "packagesPath": "C:\\Users\\krist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\obj\\",
+        "outputPath": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\DataLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\krist\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,74 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.32.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\kristofferhusdata.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\kristofferhusdata.csproj",
+        "projectName": "kristofferhusdata",
+        "projectPath": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\kristofferhusdata.csproj",
+        "packagesPath": "C:\\Users\\krist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\krist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\DataLibrary\\DataLibrary.csproj": {
+                "projectPath": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\DataLibrary\\DataLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"
@@ -51,8 +119,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,7 +131,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
