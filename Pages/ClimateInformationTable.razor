@@ -1,0 +1,58 @@
+﻿@page "/indeklima/tabel"
+
+<PageTitle>Tabel</PageTitle>
+
+@using kristofferhusdata.Data
+@using DataLibrary
+@using Microsoft.Extensions.Configuration
+@inject IDataAccess _data
+@inject IConfiguration _config
+
+
+<AuthorizeView>
+    <Authorized>
+        <h1>Mit Indeklima</h1>
+
+        @if (climateInformation == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Temp</th>
+                        <th>Humidity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var forecast in climateInformation)
+                    {
+                        <tr>
+                            <td>@forecast.DateStamp</td>
+                            <td>@forecast.Temperature</td>
+                            <td>@forecast.Humidity</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </Authorized>
+
+    <NotAuthorized>
+        <h1>Du skal logge ind for at se den her side</h1>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    List<ClimateInformation> climateInformation;
+
+    protected override async Task OnInitializedAsync()
+    {
+        string sql = "select Temperature, DateStamp, Humidity from ClimateInformation";
+
+        climateInformation = await _data.LoadData<ClimateInformation, dynamic>(sql, new { }, _config.GetConnectionString("default"));
+    }
+}

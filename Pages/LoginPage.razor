@@ -3,7 +3,6 @@
 @using kristofferhusdata.Authentication
 @inject UserAccountService userAccountService
 @inject AuthenticationStateProvider authStateProvider
-@inject ILogger<Counter> logger
 @inject IJSRuntime jsRuntime
 @inject NavigationManager NavigationManager
 
@@ -11,7 +10,7 @@
 <PageTitle>Login side</PageTitle>
 
 <div class="login-form">
-    <h1>Indsæt titel her</h1>
+    <h1>Kristoffers hus data</h1>
 
     Brugernavn: <br />
     <input @bind="model.UserName"/> <br />
@@ -46,6 +45,6 @@
             UserName = userAccount.UserName,
             Role = userAccount.Role
         });
-        NavigationManager.NavigateTo("/main", true);
+        NavigationManager.NavigateTo("/start", true);
     }
 }

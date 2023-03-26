@@ -14,7 +14,6 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 builder.Services.AddSingleton<UserAccountService>();
-builder.Services.AddSingleton<ClimateInformationService>();
 
 builder.Services.AddSingleton<IDataAccess, DataAccess>();
 

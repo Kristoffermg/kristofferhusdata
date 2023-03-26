@@ -3,12 +3,6 @@
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager NavigationManager
 
-
-
-
-
-
-
 @code {
     protected async override Task OnInitializedAsync()
     {
@@ -17,11 +11,12 @@
 
         if(user.Identity is not null && user.Identity.IsAuthenticated)
         {
-            
+            NavigationManager.NavigateTo("/start");
         }
         else
         {
             NavigationManager.NavigateTo("/login");
         }
     }
+
 }

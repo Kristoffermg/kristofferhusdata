@@ -123,3 +123,6 @@ C:\Users\krist\Documents\GitHub\kristofferhusdata\obj\Debug\net6.0\scopedcss\pro
 C:\Users\krist\Documents\GitHub\kristofferhusdata\obj\Debug\net6.0\kristofferhusdata.csproj.CopyComplete
 C:\Users\krist\Documents\GitHub\kristofferhusdata\obj\Debug\net6.0\kristofferhusdata.genruntimeconfig.cache
 C:\Users\krist\Documents\GitHub\kristofferhusdata\obj\Debug\net6.0\ref\kristofferhusdata.dll
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\ChartJs.Blazor.dll
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\obj\Debug\net6.0\scopedcss\Pages\ClimateInformationGraph.razor.rz.scp.css
