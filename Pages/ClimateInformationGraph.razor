@@ -1,0 +1,181 @@
+﻿@page "/indeklima/graf"
+@using Data;
+@using DataLibrary;
+@using ChartJs.Blazor.LineChart
+@inject IDataAccess _data
+@inject IConfiguration _config
+
+<PageTitle>Graf</PageTitle>
+
+<AuthorizeView>
+    <Authorized>
+        <h1>Indeklima d. @DateTime.Now.ToString("dd-MM-yyyy")</h1>
+
+        <div class="chart" id="temperature">
+            <Chart Config="temperatureLineConfig" @ref="_chart"></Chart>
+        </div>
+
+        <div class="chart" id="humidity">
+            <Chart Config="humidityLineConfig" @ref="_chart"></Chart>
+        </div>
+        <br />
+    </Authorized>
+
+    <NotAuthorized>
+        <h1>Du skal logge ind for at se den her side</h1>
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@code {
+    private const int InitalCount = 7;
+    private LineConfig temperatureLineConfig;
+    private LineConfig humidityLineConfig;
+    private Chart _chart;
+    List<ClimateInformation> climateInformation;
+
+    protected override async Task OnInitializedAsync()
+    {
+        setTemperatureLineConfig();
+        setHumidityLineConfig();
+        executeSQL();
+
+        List<int> temperature = new List<int>();
+        List<int> humidity = new List<int>();
+        foreach(var climate in climateInformation)
+        {
+            temperatureLineConfig.Data.Labels.Add(climate.DateStamp.ToString()); // blev nødt til at gøre det her da IList ikke har AddRange()
+            humidityLineConfig.Data.Labels.Add(climate.DateStamp.ToString());
+            temperature.Add(climate.Temperature);
+            humidity.Add(climate.Humidity);
+        }
+
+        IDataset<int> temperatureData = new LineDataset<int>(temperature)
+        {
+            Label = "Temperatur",
+            BackgroundColor = ColorUtil.FromDrawingColor(ChartProperties.ColorPalette.Blue),
+            BorderColor = ColorUtil.FromDrawingColor(ChartProperties.ColorPalette.Blue),
+            Fill = FillingMode.Disabled
+        };
+
+        IDataset<int> humidityData = new LineDataset<int>(humidity)
+        {
+            Label = "Luftfugtighed",
+            BackgroundColor = ColorUtil.FromDrawingColor(ChartProperties.ColorPalette.Orange),
+            BorderColor = ColorUtil.FromDrawingColor(ChartProperties.ColorPalette.Orange),
+            Fill = FillingMode.Disabled
+        };
+
+
+        temperatureLineConfig.Data.Datasets.Add(temperatureData);
+        humidityLineConfig.Data.Datasets.Add(humidityData);
+
+    }
+
+    async void executeSQL()
+    {
+        string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
+        string sql = $"select right(DateStamp, 8) as DateStamp, Temperature, Humidity from ClimateInformation where DateStamp like '{currentDate}%'";
+
+        climateInformation = await _data.LoadData<ClimateInformation, dynamic>(sql, new { }, _config.GetConnectionString("default"));
+    }
+
+    void setTemperatureLineConfig()
+    {
+        temperatureLineConfig = new LineConfig
+            {
+                Options = new LineOptions
+                {
+                    Responsive = true,
+                    Title = new OptionsTitle
+                    {
+                        Display = true,
+                        Text = "Temperatur °C"
+                    },
+                    Tooltips = new Tooltips
+                    {
+                        Mode = InteractionMode.Nearest,
+                        Intersect = true
+                    },
+                    Hover = new Hover
+                    {
+                        Mode = InteractionMode.Nearest,
+                        Intersect = true
+                    },
+                    Scales = new Scales
+                    {
+                        XAxes = new List<CartesianAxis>
+                        {
+                            new CategoryAxis
+                            {
+                                ScaleLabel = new ScaleLabel
+                                {
+                                    LabelString = "Tidspunkt"
+                                }
+                            }
+                        },
+                        YAxes = new List<CartesianAxis>
+                        {
+                            new LinearCartesianAxis
+                            {
+                                ScaleLabel = new ScaleLabel
+                                {
+                                    LabelString = "°C"
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+    }
+
+    void setHumidityLineConfig()
+    {
+        humidityLineConfig = new LineConfig
+            {
+                Options = new LineOptions
+                {
+                    Responsive = true,
+                    Title = new OptionsTitle
+                    {
+                        Display = true,
+                        Text = "Luftfugtighed %"
+                    },
+                    Tooltips = new Tooltips
+                    {
+                        Mode = InteractionMode.Nearest,
+                        Intersect = true
+                    },
+                    Hover = new Hover
+                    {
+                        Mode = InteractionMode.Nearest,
+                        Intersect = true
+                    },
+                    Scales = new Scales
+                    {
+                        XAxes = new List<CartesianAxis>
+                        {
+                            new CategoryAxis
+                            {
+                                ScaleLabel = new ScaleLabel
+                                {
+                                    LabelString = "Tidspunkt"
+                                }
+                            }
+                        },
+                        YAxes = new List<CartesianAxis>
+                        {
+                            new LinearCartesianAxis
+                            {
+                                ScaleLabel = new ScaleLabel
+                                {
+                                    LabelString = "%"
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+    }
+}
+

@@ -4,7 +4,7 @@ namespace kristofferhusdata.Data
 {
     public class ClimateInformation
     {
-        public DateTime DateStamp { get; set; }
+        public string DateStamp { get; set; }
 
         public int Temperature { get; set; }
 
