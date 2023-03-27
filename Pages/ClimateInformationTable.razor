@@ -13,6 +13,8 @@
     <Authorized>
         <h1>Mit Indeklima</h1>
 
+        <button class="button" @onclick="ReverseTable">Vend data om</button>
+
         @if (climateInformation == null)
         {
             <p><em>Loading...</em></p>
@@ -54,5 +56,10 @@
         string sql = "select Temperature, DateStamp, Humidity from ClimateInformation";
 
         climateInformation = await _data.LoadData<ClimateInformation, dynamic>(sql, new { }, _config.GetConnectionString("default"));
+    }
+
+    private void ReverseTable()
+    {
+        climateInformation.Reverse();
     }
 }

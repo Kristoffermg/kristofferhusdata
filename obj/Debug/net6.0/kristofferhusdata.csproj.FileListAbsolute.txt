@@ -126,3 +126,4 @@ C:\Users\krist\Documents\GitHub\kristofferhusdata\obj\Debug\net6.0\ref\kristoffe
 C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\ChartJs.Blazor.dll
 C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\obj\Debug\net6.0\scopedcss\Pages\ClimateInformationGraph.razor.rz.scp.css
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\obj\Debug\net6.0\scopedcss\Pages\ClimateInformationTable.razor.rz.scp.css
