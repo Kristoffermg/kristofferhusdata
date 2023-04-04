@@ -9,7 +9,8 @@
         {
             _users = new List<UserAccount>
             {
-                new UserAccount{ UserName = "admin", Password = "admin", Role="DiscordModerator"}
+                new UserAccount{ UserName = "admin", Password = "admin", Role="DiscordModerator"},
+                new UserAccount{ UserName = "guest", Password = "123", Role="DiscordModerator"}
             };
         }
 

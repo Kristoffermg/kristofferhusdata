@@ -127,3 +127,13 @@ C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0
 C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\obj\Debug\net6.0\scopedcss\Pages\ClimateInformationGraph.razor.rz.scp.css
 C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\obj\Debug\net6.0\scopedcss\Pages\ClimateInformationTable.razor.rz.scp.css
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\Microsoft.JSInterop.dll
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\MudBlazor.dll
+C:\Users\krist\source\repos\kristofferhusdata\kristofferhusdata\bin\Debug\net6.0\System.IO.Pipelines.dll
