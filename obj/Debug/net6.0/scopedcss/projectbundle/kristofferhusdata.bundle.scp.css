@@ -18,17 +18,60 @@ body[b-a6tznt8xop] {
 }
 /* _content/kristofferhusdata/Pages/LoginPage.razor.rz.scp.css */
 body[b-kciyt74289] {
-
+    background: #3498db;
+    margin: 0 auto 0 auto;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
 }
 
-.login-form[b-kciyt74289] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
+.loginbox[b-kciyt74289] {
+    background: white;
+    width: 400px;
+    margin: 0 auto 0 auto;
+    padding: 0px 0px 70px 0px;
+    text-align: center;
 }
 
+
+.username[b-kciyt74289] {
+    background: #ecf0f1;
+    border: #ccc 1px solid;
+    border-bottom: #ccc 2px solid;
+    padding: 8px;
+    width: 250px;
+    margin-top: 10px;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+.password[b-kciyt74289] {
+    border-radius: 4px;
+    background: #ecf0f1;
+    border: #ccc 1px solid;
+    padding: 8px;
+    width: 250px;
+    font-size: 1em;
+}
+
+button[b-kciyt74289] {
+    background: #3498db;
+    width: 125px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    border-radius: 4px;
+    border: #2980b9 1px solid;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 0.8em;
+}
+
+button:hover[b-kciyt74289] {
+    background: #2980b9;
+}
 /* _content/kristofferhusdata/Shared/LoginLayout.razor.rz.scp.css */
 body[b-5vd17rfsji] {
 }

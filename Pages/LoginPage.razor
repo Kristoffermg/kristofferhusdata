@@ -9,15 +9,17 @@
 
 <PageTitle>Login side</PageTitle>
 
-<div class="login-form">
-    <h1>Kristoffers hus data</h1>
+<div class="loginbox">
+    <h2>Kristoffers hus data</h2>
+    <br />
 
-    Brugernavn: <br />
-    <input @bind="model.UserName" @onkeydown="@OnEnterKeydown"/> <br />
+    <form class="login-form" @onsubmit=Authenticate>
+        <input type="text" @bind="model.UserName" placeholder="Brugernavn" class="username"/> <br />
+        <br />
+        <input type="password" @bind="model.Password" placeholder="Adgangskode" class="password"/> <br /> 
 
-    Adgangskode: <br />
-    <input type="password" @bind="model.Password" @onkeydown="@OnEnterKeydown"/> <br /> 
-    <button @onclick="Authenticate">Login</button>
+        <button>Login</button>
+    </form>
 </div>
 
 
@@ -33,6 +35,7 @@
     private async Task Authenticate()
     {
         var userAccount = userAccountService.GetByUsername(model.UserName);
+        var test = model.Password;
         if(userAccount == null || userAccount.Password != model.Password)
         {
             await jsRuntime.InvokeVoidAsync("alert", "Forkert brugernavn eller adgangskode");
