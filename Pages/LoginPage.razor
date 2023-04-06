@@ -13,10 +13,10 @@
     <h1>Kristoffers hus data</h1>
 
     Brugernavn: <br />
-    <input @bind="model.UserName"/> <br />
+    <input @bind="model.UserName" @onkeydown="@OnEnterKeydown"/> <br />
 
     Adgangskode: <br />
-    <input type="password" @bind="model.Password" /> <br /> 
+    <input type="password" @bind="model.Password" @onkeydown="@OnEnterKeydown"/> <br /> 
     <button @onclick="Authenticate">Login</button>
 </div>
 
@@ -46,5 +46,13 @@
             Role = userAccount.Role
         });
         NavigationManager.NavigateTo("/start", true);
+    }
+
+    private async void OnEnterKeydown(KeyboardEventArgs e)
+    {
+        if(e.Code == "Enter" || e.Code == "NumpadEnter")
+        {
+            await Authenticate();
+        }
     }
 }
