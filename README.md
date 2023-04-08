@@ -10,11 +10,11 @@ The project is deployed on Azure at https://kristofferhusdata.azurewebsites.net/
 Images from the website:
 
 Table with all data
-![alt text](https://prnt.sc/-xBL7-EFgHcc)
+https://prnt.sc/-xBL7-EFgHcc
 
 Temperature graph
-![alt text](https://prnt.sc/li5WnrRvJF-H)
+https://prnt.sc/li5WnrRvJF-H
 
 Humidity graph
-![alt text](https://prnt.sc/HLwXzNRYP5yM)
+https://prnt.sc/HLwXzNRYP5yM
 
