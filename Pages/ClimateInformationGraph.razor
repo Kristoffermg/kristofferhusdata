@@ -75,7 +75,7 @@
     async void executeSQL()
     {
         string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
-        string sql = $"select right(DateStamp, 8) as DateStamp, Temperature, Humidity from ClimateInformation where DateStamp like '{currentDate}%'";
+        string sql = $"select right(DateStamp, 5) as DateStamp, Temperature, Humidity from ClimateInformation where DateStamp like '{currentDate}%'";
 
         climateInformation = await _data.LoadData<ClimateInformation, dynamic>(sql, new { }, _config.GetConnectionString("default"));
     }
