@@ -7,6 +7,7 @@
 @using Microsoft.Extensions.Configuration
 @inject IDataAccess _data
 @inject IConfiguration _config
+@inject IDialogService DialogService
 
 
 <AuthorizeView>
@@ -32,11 +33,19 @@
                 <tbody>
                     @foreach (var forecast in climateInformation)
                     {
-                        <tr>
-                            <td>@forecast.DateStamp</td>
-                            <td>@forecast.Temperature</td>
-                            <td>@forecast.Humidity</td>
-                        </tr>
+                        currentDate = forecast.DateStamp.Substring(0, 10);
+                        @if(currentDate != previousDate)
+                        {
+                            <tr>
+                                <td>@currentDate</td>
+                                <td>
+                                    <MudButton @onclick="OpenDialog" Variant="Variant.Filled" Color="Color.Primary">
+                                        Open Simple Dialog
+                                    </MudButton>
+                                </td>
+                            </tr>
+                        }
+                        previousDate = currentDate;
                     }
                 </tbody>
             </table>
@@ -50,6 +59,7 @@
 
 @code {
     List<ClimateInformation> climateInformation;
+    string previousDate = "", currentDate = "";
 
     protected override async Task OnInitializedAsync()
     {
@@ -61,5 +71,11 @@
     private void ReverseTable()
     {
         climateInformation.Reverse();
+    }
+
+    private void OpenDialog()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        DialogService.Show<ClimateTableDialog>("Simple Dialog", options);
     }
 }
