@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\kristofferhusdata.csproj": {}
+    "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\kristofferhusdata.csproj": {}
   },
   "projects": {
-    "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\kristofferhusdata.csproj": {
+    "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\kristofferhusdata.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\kristofferhusdata.csproj",
+        "projectUniqueName": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\kristofferhusdata.csproj",
         "projectName": "kristofferhusdata",
-        "projectPath": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\kristofferhusdata.csproj",
+        "projectPath": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\kristofferhusdata.csproj",
         "packagesPath": "C:\\Users\\krist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\obj\\",
+        "outputPath": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\krist\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,7 +67,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -79,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

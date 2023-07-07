@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\krist\\.nuget\\packages\\chartjs.blazor.fork\\2.0.2\\contentFiles\\any\\netstandard2.1\\wwwroot\\ChartJsBlazorInterop.js",
+      "PackagePath": "staticwebassets\\ChartJsBlazorInterop.js"
+    },
+    {
       "Id": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\kristofferhusdata.bundle.scp.css",
       "PackagePath": "staticwebassets\\kristofferhusdata.bundle.scp.css"
     },

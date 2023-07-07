@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2t3TJ5YO75WOYGLKO51Pbr7EyqEnGuOqTccIlV/C1dk8MOtSKc1n08P/o4bB4BeJeAUtkMUVF5npXLPxQZ6RsQ==",
+  "dgSpecHash": "dxxK0uRU5TaApoeedEE+179A3ERGsX/o2MUL28gYyVOGiX5vyDY03Sb4dj3y8ecEcVL9Vp5KdZh7z43pnbQgBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\krist\\source\\repos\\kristofferhusdata\\kristofferhusdata\\kristofferhusdata.csproj",
+  "projectFilePath": "C:\\Users\\krist\\Documents\\GitHub\\kristofferhusdata\\kristofferhusdata.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\krist\\.nuget\\packages\\chartjs.blazor.fork\\2.0.2\\chartjs.blazor.fork.2.0.2.nupkg.sha512",
     "C:\\Users\\krist\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
