@@ -1,6 +1,12 @@
-﻿<MudDialog>
+﻿@using ChartJs.Blazor.LineChart
+@using kristofferhusdata.Data
+@using DataLibrary
+@inject IDataAccess _data
+@inject IConfiguration _config
+
+<MudDialog>
     <DialogContent>
-        Dialog Content
+        <Chart Config="temperatureLineConfig"></Chart>
     </DialogContent>
     <DialogActions>
         <MudButton OnClick="Cancel">Cancel</MudButton>
@@ -10,6 +16,100 @@
 
 @code {
     [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+
+    [Parameter] public string date { get; set; }
+
+    List<ClimateInformation> dateInformation;
+
+    private LineConfig temperatureLineConfig;
+
+    protected override async Task OnInitializedAsync()
+    {
+        string sql = $"SELECT DateStamp, Temperature, Humidity FROM ClimateInformation WHERE DateStamp LIKE '{date}%'";
+
+        dateInformation = await _data.LoadData<ClimateInformation, dynamic>(sql, new { }, _config.GetConnectionString("default"));
+
+        setTemperatureLineConfig();
+
+        List<int> temperature = new List<int>();
+        //List<int> humidity = new List<int>();
+        foreach (var climate in dateInformation)
+        {
+            temperatureLineConfig.Data.Labels.Add(climate.DateStamp.ToString().Substring(11)); // blev nødt til at gøre det her da IList ikke har AddRange()
+            //humidityLineConfig.Data.Labels.Add(climate.DateStamp.ToString());
+            temperature.Add(climate.Temperature);
+            //humidity.Add(climate.Humidity);
+        }
+
+        IDataset<int> temperatureData = new LineDataset<int>(temperature)
+        {
+            Label = "Temperatur",
+            BackgroundColor = ColorUtil.FromDrawingColor(ChartProperties.ColorPalette.Blue),
+            BorderColor = ColorUtil.FromDrawingColor(ChartProperties.ColorPalette.Blue),
+            Fill = FillingMode.Disabled
+        };
+
+        //IDataset<int> humidityData = new LineDataset<int>(humidity)
+        //{
+        //    Label = "Luftfugtighed",
+        //    BackgroundColor = ColorUtil.FromDrawingColor(ChartProperties.ColorPalette.Orange),
+        //    BorderColor = ColorUtil.FromDrawingColor(ChartProperties.ColorPalette.Orange),
+        //    Fill = FillingMode.Disabled
+        //};
+
+
+        temperatureLineConfig.Data.Datasets.Add(temperatureData);
+        //humidityLineConfig.Data.Datasets.Add(humidityData);
+    }
+
+    void setTemperatureLineConfig()
+    {
+        temperatureLineConfig = new LineConfig
+        {
+            Options = new LineOptions
+            {
+                Responsive = true,
+                Title = new OptionsTitle
+                {
+                    Display = true,
+                    Text = "Temperatur"
+                },
+                Tooltips = new Tooltips
+                {
+                    Mode = InteractionMode.Nearest,
+                    Intersect = true
+                },
+                Hover = new Hover
+                {
+                    Mode = InteractionMode.Nearest,
+                    Intersect = true
+                },
+                Scales = new Scales
+                {
+                    XAxes = new List<CartesianAxis>
+                {
+                    new CategoryAxis
+                    {
+                        ScaleLabel = new ScaleLabel
+                        {
+                            LabelString = "Dato"
+                        }
+                    }
+                },
+                    YAxes = new List<CartesianAxis>
+                {
+                    new LinearCartesianAxis
+                    {
+                        ScaleLabel = new ScaleLabel
+                        {
+                            LabelString = "°C"
+                        }
+                    }
+                }
+                }
+            }
+        };
+    }
 
     void Submit() => MudDialog.Close(DialogResult.Ok(true));
     void Cancel() => MudDialog.Cancel();
