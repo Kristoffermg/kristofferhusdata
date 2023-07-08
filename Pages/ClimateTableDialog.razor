@@ -7,6 +7,8 @@
 <MudDialog>
     <DialogContent>
         <Chart Config="temperatureLineConfig"></Chart>
+        <hr />
+        <Chart Config="humidityLineConfig"></Chart>
     </DialogContent>
     <DialogActions>
         <MudButton OnClick="Cancel">Cancel</MudButton>
@@ -22,6 +24,7 @@
     List<ClimateInformation> dateInformation;
 
     private LineConfig temperatureLineConfig;
+    private LineConfig humidityLineConfig;
 
     protected override async Task OnInitializedAsync()
     {
@@ -30,15 +33,16 @@
         dateInformation = await _data.LoadData<ClimateInformation, dynamic>(sql, new { }, _config.GetConnectionString("default"));
 
         setTemperatureLineConfig();
+        setHumidityLineConfig();
 
         List<int> temperature = new List<int>();
-        //List<int> humidity = new List<int>();
+        List<int> humidity = new List<int>();
         foreach (var climate in dateInformation)
         {
             temperatureLineConfig.Data.Labels.Add(climate.DateStamp.ToString().Substring(11)); // blev nødt til at gøre det her da IList ikke har AddRange()
-            //humidityLineConfig.Data.Labels.Add(climate.DateStamp.ToString());
+            humidityLineConfig.Data.Labels.Add(climate.DateStamp.ToString().Substring(11));
             temperature.Add(climate.Temperature);
-            //humidity.Add(climate.Humidity);
+            humidity.Add(climate.Humidity);
         }
 
         IDataset<int> temperatureData = new LineDataset<int>(temperature)
@@ -49,17 +53,17 @@
             Fill = FillingMode.Disabled
         };
 
-        //IDataset<int> humidityData = new LineDataset<int>(humidity)
-        //{
-        //    Label = "Luftfugtighed",
-        //    BackgroundColor = ColorUtil.FromDrawingColor(ChartProperties.ColorPalette.Orange),
-        //    BorderColor = ColorUtil.FromDrawingColor(ChartProperties.ColorPalette.Orange),
-        //    Fill = FillingMode.Disabled
-        //};
+        IDataset<int> humidityData = new LineDataset<int>(humidity)
+        {
+            Label = "Luftfugtighed",
+            BackgroundColor = ColorUtil.FromDrawingColor(ChartProperties.ColorPalette.Orange),
+            BorderColor = ColorUtil.FromDrawingColor(ChartProperties.ColorPalette.Orange),
+            Fill = FillingMode.Disabled
+        };
 
 
         temperatureLineConfig.Data.Datasets.Add(temperatureData);
-        //humidityLineConfig.Data.Datasets.Add(humidityData);
+        humidityLineConfig.Data.Datasets.Add(humidityData);
     }
 
     void setTemperatureLineConfig()
@@ -109,6 +113,55 @@
                 }
             }
         };
+    }
+
+    void setHumidityLineConfig()
+    {
+        humidityLineConfig = new LineConfig
+            {
+                Options = new LineOptions
+                {
+                    Responsive = true,
+                    Title = new OptionsTitle
+                    {
+                        Display = true,
+                        Text = "Luftfugtighed %"
+                    },
+                    Tooltips = new Tooltips
+                    {
+                        Mode = InteractionMode.Nearest,
+                        Intersect = true
+                    },
+                    Hover = new Hover
+                    {
+                        Mode = InteractionMode.Nearest,
+                        Intersect = true
+                    },
+                    Scales = new Scales
+                    {
+                        XAxes = new List<CartesianAxis>
+                        {
+                            new CategoryAxis
+                            {
+                                ScaleLabel = new ScaleLabel
+                                {
+                                    LabelString = "Tidspunkt"
+                                }
+                            }
+                        },
+                        YAxes = new List<CartesianAxis>
+                        {
+                            new LinearCartesianAxis
+                            {
+                                ScaleLabel = new ScaleLabel
+                                {
+                                    LabelString = "%"
+                                }
+                            }
+                        }
+                    }
+                }
+            };
     }
 
     void Submit() => MudDialog.Close(DialogResult.Ok(true));
