@@ -11,8 +11,7 @@
         <Chart Config="humidityLineConfig"></Chart>
     </DialogContent>
     <DialogActions>
-        <MudButton OnClick="Cancel">Cancel</MudButton>
-        <MudButton Color="Color.Primary" OnClick="Submit">Ok</MudButton>
+        <MudButton Color="Color.Primary" OnClick="Submit">Luk</MudButton>
     </DialogActions>
 </MudDialog>
 
@@ -165,5 +164,4 @@
     }
 
     void Submit() => MudDialog.Close(DialogResult.Ok(true));
-    void Cancel() => MudDialog.Cancel();
 }
