@@ -7,6 +7,7 @@
 @using Microsoft.Extensions.Configuration
 @inject IDataAccess _data
 @inject IConfiguration _config
+@inject IDialogService DialogService
 
 
 <AuthorizeView>
@@ -24,19 +25,28 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Tidspunkt</th>
-                        <th>Temperatur °C</th>
-                        <th>Luftfugtighed %</th>
+                        <th class="dato">Dag</th>
+                        <th>Data</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     @foreach (var forecast in climateInformation)
                     {
-                        <tr>
-                            <td>@forecast.DateStamp</td>
-                            <td>@forecast.Temperature</td>
-                            <td>@forecast.Humidity</td>
-                        </tr>
+                        string date = forecast.DateStamp.Substring(0, 10);
+                        currentDate = date;
+                        @if (currentDate != previousDate)
+                        {
+                            <tr>
+                                <td>@currentDate</td>
+                                <td>
+                                    <MudButton @onclick="() => OpenDialog(date)" Variant="Variant.Filled" Color="Color.Primary">
+                                        Vis data
+                                    </MudButton>
+                                </td>
+                            </tr>
+                        }
+                        previousDate = currentDate;
                     }
                 </tbody>
             </table>
@@ -50,16 +60,37 @@
 
 @code {
     List<ClimateInformation> climateInformation;
+    string previousDate = "", currentDate = "";
 
     protected override async Task OnInitializedAsync()
     {
-        string sql = "select Temperature, DateStamp, Humidity from ClimateInformation";
+        string sql = "SELECT DateStamp, Temperature, Humidity FROM ClimateInformation";
 
         climateInformation = await _data.LoadData<ClimateInformation, dynamic>(sql, new { }, _config.GetConnectionString("default"));
+        ReverseTable();
     }
 
     private void ReverseTable()
     {
         climateInformation.Reverse();
     }
+
+    private void OpenDialog(string date)
+    {
+        var options = new DialogOptions
+        {
+            FullWidth = true,
+            MaxWidth = MaxWidth.Small,
+            CloseButton = true,
+            DisableBackdropClick = false,
+            NoHeader = false,
+            Position = DialogPosition.Center,
+            CloseOnEscapeKey = true
+        };
+        //currentRowIndex = index;
+        var dayParameter = new DialogParameters { ["date"] = date };
+
+        DialogService.Show<ClimateTableDialog>(date, dayParameter, options);
+    }
 }
+    

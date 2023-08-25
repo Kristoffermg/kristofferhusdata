@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using kristofferhusdata.DataLibrary;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,8 @@ builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStat
 builder.Services.AddSingleton<UserAccountService>();
 
 builder.Services.AddSingleton<IDataAccess, DataAccess>();
+
+builder.Services.AddMudServices();
 
 
 
